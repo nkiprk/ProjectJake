@@ -1,0 +1,16 @@
+import keyboard
+import time
+import random
+# Function to perform a random action
+def perform_random_action():
+    actions = ['up', 'down', 'left', 'right']
+    action = random.choice(actions)
+    keyboard.press_and_release(action)
+    print(f"Performed action: {action}")  # Optional: print the action performed
+# Main loop to continuously perform random actions
+try:
+    while True:
+        perform_random_action()
+        time.sleep(random.uniform(0.5, 1))  # Wait for a random time between actions
+except KeyboardInterrupt:
+    print("Program exited.") 
